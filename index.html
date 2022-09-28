@@ -8,30 +8,37 @@
     <title>Travel</title>
     <link rel="stylesheet" href="./vendor/normalize.css">
     <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./style-adaptive.css" />
     <link rel="icon" href="./assets/svg/favicon.ico">
 </head>
 
 <body>
     <div class="page">
         <header class="header">
-            <div class="header__shadow">
+            <div class="header__shadow header__shadow_blue">
                 <div class="container header__container">
                     <div class="logo">
                         <div class="logo__img"></div>
                         <p class="logo__text">Travel Portal</p>
                     </div>
 
-                    <nav>
+                    <nav class="nav">
                         <ul class="header__links">
                             <li class="header__li"><a href="#preview" class="header__link">How It Works</a></li>
                             <li class="header__li"><a href="#steps" class="header__link">Plan Your Trip</a></li>
                             <li class="header__li"><a href="#destinations" class="header__link">Destinations</a></li>
                             <li class="header__li"><a href="#stories" class="header__link">Travel Stories</a></li>
+                            <li class="header__li mobile"><a href="#stories" class="header__link">Account</a></li>
+                            <li class="header__li mobile"><a href="#stories" class="header__link">Social Media</a></li>
                         </ul>
                     </nav>
-                    <!-- <button class="button button_place_header button_font-size_s button__text">Login</button> -->
                     <button class="header__button button"><span class="button__text button__text_s">Login</span>
                     </button>
+                    <div class="hamburger" id="hamburger">
+                        <span class="line line-1"></span>
+                        <span class="line line-2"></span>
+                        <span class="line line-3"></span>
+                    </div>
                 </div>
             </div>
         </header>
@@ -44,19 +51,13 @@
                         <p class="preview__text">
                             Receive personalized recommendations for countries, hotels, activities and more
                         </p>
-                        <form>
-                            <div>
+                        <div class="preview__box">
+                            <form class="preview__form">
                                 <input type="text" class="preview__input" placeholder="What would you like to do?">
-                                <!-- <button
-                                    class="button button_place_preview button_font-size_m button__text">Start&nbsp;Planning
-                                </button> -->
-                                <!-- <button
-                                    class="preview__button button button_font-size_m button_text">Start&nbsp;Planning
-                                </button> -->
                                 <button class="preview__button button">
                                     <span class="button__text button__text_m">Start&nbsp;Planning</span></button>
-                            </div>
-                        </form>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -83,9 +84,9 @@
             </section>
 
             <section class="destinations" id="destinations">
-                <div class="container destinations__container">
-                    <h2 class="section-title">POPULAR DESTINATIONS</h2>
-                </div>
+                <!-- <div class="container destinations__container"> -->
+                <h2 class="section-title">POPULAR DESTINATIONS</h2>
+                <!-- </div> -->
 
                 <div class="slider">
                     <!-- <div class="slider__wrapper"> -->
@@ -102,6 +103,7 @@
                         <img src="./assets/images/USA.jpg" alt="" class="slider__img"></img>
                         <p class="slider__text">USA</p>
                     </div>
+
                     <!-- </div> -->
                 </div>
                 <div class="circles">
@@ -109,9 +111,13 @@
                     <span class="circles__dot active" data-circle="1"></span>
                     <span class="circles__dot" data-circle="2"></span>
                 </div>
+                <div class="arrows">
+                    <img src="./assets/svg/arrow-left.svg" alt="" class="arrows__left">
+                    <img src="./assets/svg/arrow-right.svg" alt="" class="arrows__right">
+                </div>
 
                 <button class="destinations__button button">
-                    <img src="./assets/svg/arrow-right.svg" alt="" class="button__img">
+                    <img src="./assets/svg/button-arrow.svg" alt="" class="button__img">
                     <span class="button__text button__text_m">Find&nbsp;More</span></button>
             </section>
 
@@ -123,6 +129,7 @@
                             <div class="table">
                                 <div class="table__cell">
                                     <img src="./assets/images/Thailand.jpg" alt="" class="table__img">
+                                    <!-- <img src="./assets/images/Thailand-mobile.jpg" alt="" class="table__img_mobile"> -->
                                     <div class="table__text">
                                         <h4 class="table__heading">10 Photos of Attractive Thailand</h4>
                                         <p class="table__paragraph">Lorem ipsum dolor sit amet, consectetur
@@ -243,7 +250,7 @@
                                 </div>
                             </div>
 
-                            <button class="stories__button button"><img src="./assets/svg/arrow-right.svg" alt=""
+                            <button class="stories__button button"><img src="./assets/svg/button-arrow.svg" alt=""
                                     class="button__img"><span
                                     class="button__text button__text_m">See&nbsp;More</span></button>
                         </div>
@@ -277,6 +284,7 @@
             </div>
         </footer>
     </div>
+    <script src="./script.js"></script>
 </body>
 
 </html>
