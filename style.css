@@ -40,13 +40,18 @@
   font-weight: 500;
 }
 
+@font-face {
+  font-family: "Red Hat Text";
+  src: url(./fonts/Red_Hat_Text/static/RedHatText-Regular.ttf);
+  font-style: normal;
+  font-weight: 400;
+}
+
 /* ---------------button--------------- */
 .button {
   background: #0d606f;
   border-radius: 10px;
   border: 0;
-  /* box-shadow: 0px 0px 3px rgba(13, 96, 111, 0.08),
-    0px 2px 3px rgba(13, 96, 111, 0.16); */
   cursor: pointer;
   transition: 1s;
 }
@@ -71,12 +76,12 @@
   color: #ffffff;
 }
 
-.button__text_s {
+.button__text_type_s {
   font-size: 16px;
   line-height: 21px;
 }
 
-.button__text_m {
+.button__text_type_m {
   font-size: 24px;
   line-height: 32px;
 }
@@ -84,6 +89,7 @@
 .header__button {
   width: 103px;
   height: 41px;
+  margin-top: 2px;
 }
 
 .destinations__button {
@@ -198,14 +204,14 @@
 .header__li {
   display: inline-block;
   list-style: none;
-  padding-left: 42px;
+  padding-left: 40px;
 }
 
 .hamburger {
   display: none;
 }
 
-.mobile {
+.header__li_adaptive {
   display: none;
 }
 
@@ -413,7 +419,7 @@
   transition: 1s;
 }
 
-.slider__dot:hover {
+.circles__dot:hover {
   background-color: #bdae82;
 }
 
@@ -574,4 +580,231 @@
 
 .footer__social-icon_gh {
   background-image: url("./assets/svg/gh.svg");
+}
+
+/* ------modal------ */
+.modal {
+  display: none;
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal_active {
+  display: flex;
+}
+
+.modal__form {
+  margin: 0 auto;
+  width: 650px;
+  display: flex;
+  justify-content: space-between;
+  background: linear-gradient(177.09deg, #ffffff 6.15%, #0d606f 202.69%);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 16px;
+  position: relative;
+}
+
+.modal__block-signIn {
+  display: none;
+  height: 660px;
+  justify-content: space-between;
+  flex-direction: column;
+  text-align: center;
+  padding: 25px 45px;
+  margin: 0 auto;
+}
+
+.modal__block-signIn_active {
+  display: flex;
+}
+
+.modal__block-signUp {
+  display: none;
+  height: 436px;
+  justify-content: space-between;
+  flex-direction: column;
+  text-align: center;
+  padding: 25px 45px;
+  margin: 0 auto;
+}
+
+.modal__block-signUp_active {
+  display: flex;
+}
+
+.modal__block-signReg {
+  display: none;
+  height: 500px;
+  justify-content: space-between;
+  flex-direction: column;
+  text-align: center;
+  padding: 25px 45px;
+  margin: 0 auto;
+}
+
+.modal__block-signReg_active {
+  display: flex;
+}
+
+.modal__close {
+  position: absolute;
+  height: 35px;
+  width: 35px;
+  top: -25px;
+  right: -45px;
+  cursor: pointer;
+  transition: 1s;
+}
+
+.modal__close-line {
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  background-color: #ffffff;
+}
+
+.modal__close-line-left {
+  transform: rotate(45deg);
+}
+
+.modal__close-line-right {
+  transform: rotate(-45deg);
+}
+
+.modal__title {
+  margin: 0;
+  font-family: "Aleo";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 38px;
+  color: #0d606f;
+}
+
+.modal__button {
+  width: 560px;
+  height: 56px;
+  padding: 0;
+  border: 0;
+  box-shadow: 0px 0px 3px rgba(13, 96, 111, 0.08),
+    0px 2px 3px rgba(13, 96, 111, 0.16);
+  border-radius: 10px;
+}
+
+.modal__button_text {
+  font-family: "Red Hat Text";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 26px;
+}
+
+.modal__button-pos {
+  margin-left: 40px;
+}
+
+.modal__button_type_facebook {
+  color: #ffffff;
+  background: #1877f2;
+  background-image: url(./assets/svg/facebook.svg);
+  background-repeat: no-repeat;
+  background-position: center left 165px;
+}
+
+.modal__button_type_google {
+  color: #0d606f;
+  background: #ffffff;
+  background-image: url(./assets/svg/google.svg);
+  background-repeat: no-repeat;
+  background-position: center left 175px;
+}
+
+.modal__button_type_text {
+  padding-left: 10px;
+  background: #ffffff;
+}
+
+.modal__button_type_signIn {
+  color: #ffffff;
+  background: #0d606f;
+}
+
+.modal__button_type_signUp {
+  color: #ffffff;
+  background: #0d606f;
+}
+
+.modal__button_type_password {
+  color: #ffffff;
+  background: #0d606f;
+}
+
+.modal__button_link {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.modal__text {
+  margin: 0;
+  font-family: "Aleo";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 18px;
+  color: rgba(13, 96, 111, 0.5);
+  text-shadow: 0px 2px 3px rgba(255, 255, 255, 0.16);
+}
+
+.modal__text-underline {
+  text-decoration-line: underline;
+  color: #0d606f;
+}
+
+.modal__underline {
+  border: 1px solid rgba(13, 96, 111, 0.5);
+}
+
+.modal__button-name {
+  margin: 0;
+  text-align: left;
+  font-family: "Aleo";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #0d606f;
+}
+
+.modal__line {
+  /* width: 50%; */
+  /* height: 80px; */
+  /* margin: 0 auto; */
+  /* text-align: center; */
+  /* background-color: #e5e5e5; */
+  background-image: linear-gradient(
+    to top,
+    #e5e5e5 10px,
+    rgba(13, 96, 111, 0.5) 10px,
+    rgba(13, 96, 111, 0.5) 11px,
+    #e5e5e5 11px
+  );
+}
+
+.modal__line-text {
+  display: inline-block;
+  font-family: "Aleo";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  color: rgba(13, 96, 111, 0.5);
 }
