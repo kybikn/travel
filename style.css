@@ -640,7 +640,7 @@
 
 .modal__block-signReg {
   display: none;
-  height: 500px;
+  height: 460px;
   justify-content: space-between;
   flex-direction: column;
   text-align: center;
@@ -728,6 +728,7 @@
 .modal__button_type_text {
   padding-left: 10px;
   background: #ffffff;
+  margin-bottom: 20px;
 }
 
 .modal__button_type_signIn {

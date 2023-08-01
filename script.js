@@ -114,11 +114,19 @@ buttonPassword.addEventListener("click", alertPassword);
 //   Resultpass.value = " ";
 // }
 // -------
-// popup = document.getElementById("mail");
+// popup = document.getElementById("signIn");
 // popup.messages.value = "";
 // -------
 // document.getElementById("signIn").reset();
 // -------
 // HTMLFormElement.reset();
 // -------
+// document.querySelectorAll(selector)
+// .forEach(function (item) {
+//   item.value = "";
+// });
+// -------
 // document.getElementById("signIn").value = "";
+
+// document.querySelectorAll("popup__input").value = "";
+// самое правильное и простое form.reset();

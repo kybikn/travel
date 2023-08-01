@@ -45,7 +45,7 @@
                                     <div class="modal__close-line modal__close-line-right"></div>
                                 </div>
                             </a>
-                            <form class="modal__block-signIn">
+                            <div class="modal__block-signIn">
                                 <h4 class="modal__title">Log in to your account</h4>
                                 <a href="https://ru-ru.facebook.com/" target="_blank" rel="noopener noreferrer"
                                     class="modal__button modal__button_text modal__button_type_facebook modal__button_link">
@@ -64,15 +64,26 @@
                                     <p class="modal__line-text">or</p>
                                 </div>
                                 <!-- <form action="action=mailto:kybik.n@mail.ru" id="signIn"> -->
-                                <p class="modal__button-name">E-mail<br>
+                                <!-- <p class="modal__button-name">E-mail<br>
                                     <input type="email" class="modal__button modal__button_text modal__button_type_text"
                                         required>
                                 </p>
                                 <p class="modal__button-name">Password<br>
                                     <input type="password"
                                         class="modal__button modal__button_text modal__button_type_text" required>
-                                </p>
+                                </p> -->
                                 <!-- </form> -->
+                                <form action="mailto:kybik.n@mail.ru" enctype="text/plain" method="get" id="signIn">
+                                    <legend class="modal__button-name">E-mail</legend>
+                                    <input name="login" type="email"
+                                        class="modal__button modal__button_text modal__button_type_text" autocomplete
+                                        required>
+                                    <legend class="modal__button-name">Password</legend>
+                                    <input name="password" type="password"
+                                        class="modal__button modal__button_text modal__button_type_text" autocomplete
+                                        required>
+                                </form>
+                                <!-- -------- -->
                                 <button type="submit"
                                     class="modal__button modal__button_text modal__button_type_signIn">Sign
                                     In</button>
@@ -81,18 +92,21 @@
                                 <p class="modal__text">Don’t have an account?
                                     <span class="modal__text-underline modal__reg">Register</span>
                                 </p>
-                            </form>
+                            </div>
 
-                            <form class="modal__block-signUp">
+                            <div class="modal__block-signUp">
                                 <h4 class="modal__title">Create account</h4>
-                                <p class="modal__button-name">E-mail<br>
-                                    <input type="email" class="modal__button modal__button_text modal__button_type_text"
+                                <form>
+                                    <legend class="modal__button-name">E-mail</legend>
+                                    <input name="login" type="email"
+                                        class="modal__button modal__button_text modal__button_type_text" autocomplete
                                         required>
-                                </p>
-                                <p class="modal__button-name">Password<br>
-                                    <input type="password"
-                                        class="modal__button modal__button_text modal__button_type_text" required>
-                                </p>
+                                    <legend class="modal__button-name">Password</legend>
+                                    <input name="password" type="password"
+                                        class="modal__button modal__button_text modal__button_type_text" autocomplete
+                                        required>
+                                </form>
+
                                 <button type="submit"
                                     class="modal__button modal__button_text modal__button_type_signUp">Sign
                                     Up</button>
@@ -100,11 +114,25 @@
                                 <p class="modal__text">Already have an account?<span
                                         class="modal__text-underline modal__log">Log in</span>
                                 </p>
-                            </form>
+                            </div>
 
-                            <form class="modal__block-signReg">
+                            <div class="modal__block-signReg">
                                 <h4 class="modal__title">Password recovery</h4>
-                                <p class="modal__button-name">E-mail<br>
+                                <form>
+                                    <legend class="modal__button-name">E-mail</legend>
+                                    <input name="login" type="email"
+                                        class="modal__button modal__button_text modal__button_type_text" autocomplete
+                                        required>
+                                    <legend class="modal__button-name">New password</legend>
+                                    <input name="password" type="password"
+                                        class="modal__button modal__button_text modal__button_type_text" autocomplete
+                                        required>
+                                    <legend class="modal__button-name">Password</legend>
+                                    <input name="password" type="password"
+                                        class="modal__button modal__button_text modal__button_type_text" autocomplete
+                                        required>
+                                </form>
+                                <!-- <p class="modal__button-name">E-mail<br>
                                     <input type="email" class="modal__button modal__button_text modal__button_type_text"
                                         required>
                                 </p>
@@ -115,11 +143,11 @@
                                 <p class="modal__button-name">Password<br>
                                     <input type="password"
                                         class="modal__button modal__button_text modal__button_type_text" required>
-                                </p>
+                                </p> -->
                                 <button type="submit"
                                     class="modal__button modal__button_text modal__button_type_password">Restore
                                     password</button>
-                            </form>
+                            </div>
                         </div>
 
 
