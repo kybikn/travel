@@ -73,15 +73,15 @@
                                         class="modal__button modal__button_text modal__button_type_text" required>
                                 </p> -->
                                 <!-- </form> -->
-                                <form action="mailto:kybik.n@mail.ru" enctype="text/plain" method="get" id="signIn">
+                                <form id="signIn">
                                     <legend class="modal__button-name">E-mail</legend>
-                                    <input name="login" type="email"
+                                    <input name="login" type="email" id="emailSignIn"
                                         class="modal__button modal__button_text modal__button_type_text" autocomplete
-                                        required>
+                                        minlength="6" maxlength="40" required>
                                     <legend class="modal__button-name">Password</legend>
-                                    <input name="password" type="password"
+                                    <input name="password" type="password" id="passwordSignIn"
                                         class="modal__button modal__button_text modal__button_type_text" autocomplete
-                                        required>
+                                        minlength="6" maxlength="40" required>
                                 </form>
                                 <!-- -------- -->
                                 <button type="submit"
@@ -96,13 +96,13 @@
 
                             <div class="modal__block-signUp">
                                 <h4 class="modal__title">Create account</h4>
-                                <form>
+                                <form id="signUp">
                                     <legend class="modal__button-name">E-mail</legend>
-                                    <input name="login" type="email"
+                                    <input name="login" type="email" id="emailSignUp"
                                         class="modal__button modal__button_text modal__button_type_text" autocomplete
                                         required>
                                     <legend class="modal__button-name">Password</legend>
-                                    <input name="password" type="password"
+                                    <input name="password" type="password" id="passwordSignUp"
                                         class="modal__button modal__button_text modal__button_type_text" autocomplete
                                         required>
                                 </form>
@@ -118,17 +118,17 @@
 
                             <div class="modal__block-signReg">
                                 <h4 class="modal__title">Password recovery</h4>
-                                <form>
+                                <form id="signReg">
                                     <legend class="modal__button-name">E-mail</legend>
-                                    <input name="login" type="email"
+                                    <input name="login" type="email" id="emailSignReg"
                                         class="modal__button modal__button_text modal__button_type_text" autocomplete
                                         required>
                                     <legend class="modal__button-name">New password</legend>
-                                    <input name="password" type="password"
+                                    <input name="password" type="password" id="passwordNewSignReg"
                                         class="modal__button modal__button_text modal__button_type_text" autocomplete
                                         required>
                                     <legend class="modal__button-name">Password</legend>
-                                    <input name="password" type="password"
+                                    <input name="password" type="password" id="passwordSignReg"
                                         class="modal__button modal__button_text modal__button_type_text" autocomplete
                                         required>
                                 </form>

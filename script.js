@@ -15,7 +15,7 @@ function closeMenu(event) {
 }
 
 // --------------------
-// const form = document.querySelector("#signIn");
+const form = document.getElementById("#signIn");
 const button = document.querySelector(".header__button");
 const buttonAdaptive = document.querySelector(".header__li_modal");
 const popup = document.querySelector(".modal");
@@ -60,19 +60,41 @@ function openModalReconst() {
   modalSignReg.classList.add("modal__block-signReg_active");
 }
 
+
 function alertSignIn() {
   popup.classList.remove("modal_active");
-  alert("You have successfully logged in !");
+  let emailSignIn = document.getElementById("emailSignIn").value;
+  let passwordSignIn = document.getElementById("passwordSignIn").value;
+  alert('email:' + ' ' + emailSignIn + '   ' + 'password:' + ' ' + passwordSignIn);
+  reset();
 }
 
 function alertSignUp() {
   popup.classList.remove("modal_active");
-  alert("You have successfully registered !");
+  let emailSignUp = document.getElementById("emailSignUp").value;
+  let passwordSignUp = document.getElementById("passwordSignUp").value;
+  alert('email:' + ' ' + emailSignUp + '   ' + 'password:' + ' ' + passwordSignUp);
+  reset();
 }
 
 function alertPassword() {
   popup.classList.remove("modal_active");
+  let emailSignReg = document.getElementById("emailSignReg").value;
+  let passwordNewSignReg = document.getElementById("passwordNewSignReg").value;
+  let passwordSignReg = document.getElementById("passwordSignReg").value;
+  alert('email:' + ' ' + emailSignReg + '   ' + 'new password:' + ' ' + passwordNewSignReg + '   ' + 'password:' + ' ' + passwordSignReg);
   alert("You have successfully changed your password !");
+  reset();
+}
+
+function reset() {
+  emailSignIn.value = "";
+  passwordSignIn.value = "";
+  emailSignUp.value = "";
+  passwordSignUp.value = "";
+  emailSignReg.value = "";
+  passwordNewSignReg.value = "";
+  passwordSignReg.value = "";
 }
 
 function close() {
