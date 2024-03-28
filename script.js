@@ -42,11 +42,6 @@ function handleSubmit(e) {
   e.preventDefault();
 }
 
-// form.addEventListener("submit", (e) => {
-//   e.prevent.Default();
-//   e.target.reset();
-// });
-
 function openModalSignUp() {
   popup.classList.add("modal_active");
   modalSignIn.classList.remove("modal__block-signIn_active");
@@ -62,28 +57,29 @@ function openModalReconst() {
 
 
 function alertSignIn() {
-  popup.classList.remove("modal_active");
   let emailSignIn = document.getElementById("emailSignIn").value;
   let passwordSignIn = document.getElementById("passwordSignIn").value;
   alert('email:' + ' ' + emailSignIn + '   ' + 'password:' + ' ' + passwordSignIn);
+  popup.classList.remove("modal_active");
   reset();
 }
 
 function alertSignUp() {
-  popup.classList.remove("modal_active");
+
   let emailSignUp = document.getElementById("emailSignUp").value;
   let passwordSignUp = document.getElementById("passwordSignUp").value;
   alert('email:' + ' ' + emailSignUp + '   ' + 'password:' + ' ' + passwordSignUp);
+  popup.classList.remove("modal_active");
   reset();
 }
 
 function alertPassword() {
-  popup.classList.remove("modal_active");
   let emailSignReg = document.getElementById("emailSignReg").value;
   let passwordNewSignReg = document.getElementById("passwordNewSignReg").value;
   let passwordSignReg = document.getElementById("passwordSignReg").value;
   alert('email:' + ' ' + emailSignReg + '   ' + 'new password:' + ' ' + passwordNewSignReg + '   ' + 'password:' + ' ' + passwordSignReg);
   alert("You have successfully changed your password !");
+  popup.classList.remove("modal_active");
   reset();
 }
 
@@ -125,30 +121,4 @@ buttonSignIn.addEventListener("click", alertSignIn);
 buttonSignUp.addEventListener("click", alertSignUp);
 buttonPassword.addEventListener("click", alertPassword);
 
-// document.addEventListener("submit", (e) => {
-//   e.prevent.Default();
-//   e.target.reset();
-// });
-// -------
-// Resultpass.value = "";
-// -------
-// function ClearText(Resultpass) {
-//   Resultpass.value = " ";
-// }
-// -------
-// popup = document.getElementById("signIn");
-// popup.messages.value = "";
-// -------
-// document.getElementById("signIn").reset();
-// -------
-// HTMLFormElement.reset();
-// -------
-// document.querySelectorAll(selector)
-// .forEach(function (item) {
-//   item.value = "";
-// });
-// -------
-// document.getElementById("signIn").value = "";
 
-// document.querySelectorAll("popup__input").value = "";
-// самое правильное и простое form.reset();
