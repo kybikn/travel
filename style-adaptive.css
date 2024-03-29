@@ -250,20 +250,17 @@
   /* ---------------destinations--------------- */
 
   .slider {
-    /* gap: 15px; */
     width: 390px;
-    margin: 20px auto 0 auto;
+    margin: 20px auto 10px auto;
   }
 
   .slider__img {
     height: 210px;
     width: 360px;
-    position: relative;
   }
 
   .slider__text {
-    bottom: 180px;
-    left: 15px;
+    padding: 0 270px 170px 0;
     font-size: 20px;
     line-height: 26px;
   }
@@ -273,48 +270,30 @@
     z-index: 1;
     width: 36px;
     height: 8px;
-    left: 175px;
-    bottom: -30px;
-    gap: 6px;
+    left: 178px;
+    bottom: -39px;
+    gap: 7px;
     margin-top: 0;
   }
 
   .circles__dot {
-    width: 8px;
-    height: 8px;
-  }
-
-  .active {
-    background: #f2785c;
+    width: 7px;
+    height: 7px;
   }
 
   .arrows {
     display: block;
   }
 
-  /* .arrows__left {
-    position: absolute;
-    z-index: 1;
-    left: 25px;
-    bottom: 47px;
-  }
-
-  .arrows__right {
-    position: absolute;
-    z-index: 1;
-    right: 25px;
-    bottom: 47px;
-  } */
-
   .arrows_left {
     position: absolute;
-     top: 80px;
+     top: 92px;
     left: 25px;
   }
   
   .arrows_right {
     position: absolute;
-    top: 80px;
+    top: 92px;
     right: 25px;
   }
 
