@@ -1,3 +1,4 @@
+// ------------hamburger------------
 const hamburger = document.querySelector(".hamburger");
 const nav = document.querySelector(".nav");
 
@@ -14,8 +15,8 @@ function closeMenu(event) {
   hamburger.classList.remove("change");
 }
 
-// --------------------
-// const form = document.querySelector("#signIn");
+// ------------popup------------
+const form = document.getElementById("#signIn");
 const button = document.querySelector(".header__button");
 const buttonAdaptive = document.querySelector(".header__li_modal");
 const popup = document.querySelector(".modal");
@@ -42,11 +43,6 @@ function handleSubmit(e) {
   e.preventDefault();
 }
 
-// form.addEventListener("submit", (e) => {
-//   e.prevent.Default();
-//   e.target.reset();
-// });
-
 function openModalSignUp() {
   popup.classList.add("modal_active");
   modalSignIn.classList.remove("modal__block-signIn_active");
@@ -60,19 +56,42 @@ function openModalReconst() {
   modalSignReg.classList.add("modal__block-signReg_active");
 }
 
+
 function alertSignIn() {
+  let emailSignIn = document.getElementById("emailSignIn").value;
+  let passwordSignIn = document.getElementById("passwordSignIn").value;
+  alert('email:' + ' ' + emailSignIn + '   ' + 'password:' + ' ' + passwordSignIn);
   popup.classList.remove("modal_active");
-  alert("You have successfully logged in !");
+  reset();
 }
 
 function alertSignUp() {
+
+  let emailSignUp = document.getElementById("emailSignUp").value;
+  let passwordSignUp = document.getElementById("passwordSignUp").value;
+  alert('email:' + ' ' + emailSignUp + '   ' + 'password:' + ' ' + passwordSignUp);
   popup.classList.remove("modal_active");
-  alert("You have successfully registered !");
+  reset();
 }
 
 function alertPassword() {
-  popup.classList.remove("modal_active");
+  let emailSignReg = document.getElementById("emailSignReg").value;
+  let passwordNewSignReg = document.getElementById("passwordNewSignReg").value;
+  let passwordSignReg = document.getElementById("passwordSignReg").value;
+  alert('email:' + ' ' + emailSignReg + '   ' + 'new password:' + ' ' + passwordNewSignReg + '   ' + 'password:' + ' ' + passwordSignReg);
   alert("You have successfully changed your password !");
+  popup.classList.remove("modal_active");
+  reset();
+}
+
+function reset() {
+  emailSignIn.value = "";
+  passwordSignIn.value = "";
+  emailSignUp.value = "";
+  passwordSignUp.value = "";
+  emailSignReg.value = "";
+  passwordNewSignReg.value = "";
+  passwordSignReg.value = "";
 }
 
 function close() {
@@ -98,35 +117,89 @@ closeButton.addEventListener("click", close);
 reg.addEventListener("click", openModalSignUp);
 log.addEventListener("click", openModalSignIn);
 pass.addEventListener("click", openModalReconst);
-
 buttonSignIn.addEventListener("click", alertSignIn);
 buttonSignUp.addEventListener("click", alertSignUp);
 buttonPassword.addEventListener("click", alertPassword);
 
-// document.addEventListener("submit", (e) => {
-//   e.prevent.Default();
-//   e.target.reset();
-// });
-// -------
-// Resultpass.value = "";
-// -------
-// function ClearText(Resultpass) {
-//   Resultpass.value = " ";
-// }
-// -------
-// popup = document.getElementById("signIn");
-// popup.messages.value = "";
-// -------
-// document.getElementById("signIn").reset();
-// -------
-// HTMLFormElement.reset();
-// -------
-// document.querySelectorAll(selector)
-// .forEach(function (item) {
-//   item.value = "";
-// });
-// -------
-// document.getElementById("signIn").value = "";
 
-// document.querySelectorAll("popup__input").value = "";
-// самое правильное и простое form.reset();
+// ------------slider------------
+const dots = document.querySelectorAll('.circles__dot')
+const imageSlider = document.querySelectorAll('.slider__img')
+const textSlider = document.querySelectorAll('.slider__text')
+const leftArrow = document.querySelector('.arrows_left')
+const rightArrow = document.querySelector('.arrows_right')
+
+dots[0].classList.add('active')
+imageSlider[0].classList.add('active')
+
+let counter = 0;
+// let countertext = 0;
+
+for (let i = 0; i < dots.length; i++) {
+  dots[i].addEventListener('click', () => {
+    for (let k = 0; k < imageSlider.length; k++) {
+      dots[k].classList.remove('active')
+      imageSlider[k].classList.remove('active')
+    }
+    counter = i;
+    imageSlider[counter].classList.add('active');
+    dots[counter].classList.add('active');
+  })
+}
+
+leftArrow.addEventListener('click', () => {
+  for (let k = 0; k < imageSlider.length; k++) {
+    dots[k].classList.remove('active')
+    imageSlider[k].classList.remove('active')
+  }
+  counter--
+  // countertext--
+  if (counter < 0) {
+    counter = imageSlider.length - 1
+    // counter = imageSlider
+  }
+  imageSlider[counter].classList.add('active');
+  dots[counter].classList.add('active');
+})
+
+rightArrow.addEventListener('click', () => {
+  for (let k = 0; k < imageSlider.length; k++) {
+    dots[k].classList.remove('active')
+    imageSlider[k].classList.remove('active')
+    // textSlider.style.display = "none";
+  }
+  counter++
+  // countertext++
+  if (counter >= imageSlider.length) {
+    counter = 0
+  }
+  // textSlider[textSlider.length - 1].style.display = "block";
+  imageSlider[counter].classList.add('active');
+  dots[counter].classList.add('active');
+})
+
+
+function slowSlider() {
+  for (let k = 0; k < imageSlider.length; k++) {
+    dots[k].classList.remove('active')
+    imageSlider[k].classList.remove('active')
+  }
+  counter++
+  // countertext++
+  if (counter >= imageSlider.length) {
+    counter = 0
+  }
+  imageSlider[counter].classList.add('active');
+  dots[counter].classList.add('active');
+}
+
+
+
+
+
+
+
+
+
+
+
