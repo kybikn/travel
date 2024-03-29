@@ -129,68 +129,61 @@ const textSlider = document.querySelectorAll('.slider__text')
 const leftArrow = document.querySelector('.arrows_left')
 const rightArrow = document.querySelector('.arrows_right')
 
-dots[0].classList.add('active')
+dots[0].classList.add('active__dots')
 imageSlider[0].classList.add('active')
 
 let counter = 0;
-// let countertext = 0;
 
 for (let i = 0; i < dots.length; i++) {
   dots[i].addEventListener('click', () => {
     for (let k = 0; k < imageSlider.length; k++) {
-      dots[k].classList.remove('active')
+      dots[k].classList.remove('active__dots')
       imageSlider[k].classList.remove('active')
     }
     counter = i;
     imageSlider[counter].classList.add('active');
-    dots[counter].classList.add('active');
+    dots[counter].classList.add('active__dots');
   })
 }
 
 leftArrow.addEventListener('click', () => {
   for (let k = 0; k < imageSlider.length; k++) {
-    dots[k].classList.remove('active')
+    dots[k].classList.remove('active__dots')
     imageSlider[k].classList.remove('active')
   }
   counter--
-  // countertext--
   if (counter < 0) {
     counter = imageSlider.length - 1
-    // counter = imageSlider
   }
   imageSlider[counter].classList.add('active');
-  dots[counter].classList.add('active');
+  dots[counter].classList.add('active__dots');
 })
 
 rightArrow.addEventListener('click', () => {
   for (let k = 0; k < imageSlider.length; k++) {
-    dots[k].classList.remove('active')
+    dots[k].classList.remove('active__dots')
     imageSlider[k].classList.remove('active')
-    // textSlider.style.display = "none";
   }
   counter++
-  // countertext++
   if (counter >= imageSlider.length) {
     counter = 0
   }
-  // textSlider[textSlider.length - 1].style.display = "block";
   imageSlider[counter].classList.add('active');
-  dots[counter].classList.add('active');
+  dots[counter].classList.add('active__dots');
 })
 
 
 function slowSlider() {
   for (let k = 0; k < imageSlider.length; k++) {
-    dots[k].classList.remove('active')
+    dots[k].classList.remove('active__dots')
     imageSlider[k].classList.remove('active')
   }
   counter++
-  // countertext++
   if (counter >= imageSlider.length) {
     counter = 0
   }
   imageSlider[counter].classList.add('active');
-  dots[counter].classList.add('active');
+  dots[counter].classList.add('active__dots');
 }
 
 
