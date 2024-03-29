@@ -12,7 +12,7 @@
     <link rel="icon" href="./assets/svg/favicon.ico">
 </head>
 
-<body>
+<body>Verification: 94d4223d77f9739d
     <div class="page">
         <header class="header">
             <div class="header__shadow header__shadow_blue">
@@ -63,14 +63,18 @@
                                     <p class="modal__line-text">or</p>
                                 </div>
                                 <form id="signIn" name="signIn">
-                                    <legend class="modal__button-name">E-mail</legend>
-                                    <input name="login" type="email" id="emailSignIn"
-                                        class="modal__button modal__button_text modal__button_type_text" autocomplete
-                                        minlength="6" maxlength="20" required>
-                                    <legend class="modal__button-name">Password</legend>
-                                    <input name="password" type="password" id="passwordSignIn"
-                                        class="modal__button modal__button_text modal__button_type_text" autocomplete
-                                        minlength="6" maxlength="40" required>
+                                    <fieldset>
+                                        <legend class="modal__button-name">E-mail</legend>
+                                        <input name="login" type="email" id="emailSignIn"
+                                            class="modal__button modal__button_text modal__button_type_text"
+                                            minlength="6" maxlength="20" required>
+                                    </fieldset>
+                                    <fieldset>
+                                        <legend class="modal__button-name">Password</legend>
+                                        <input name="password" type="password" id="passwordSignIn"
+                                            class="modal__button modal__button_text modal__button_type_text"
+                                            minlength="6" maxlength="40" required>
+                                    </fieldset>
                                     <button type="submit"
                                         class="modal__button modal__button_text modal__button_type_signIn">Sign
                                         In</button>
@@ -85,14 +89,18 @@
                             <div class="modal__block-signUp">
                                 <h4 class="modal__title">Create account</h4>
                                 <form id="signUp" name="signUp">
-                                    <legend class="modal__button-name">E-mail</legend>
-                                    <input name="login" type="email" id="emailSignUp"
-                                        class="modal__button modal__button_text modal__button_type_text" autocomplete
-                                        minlength="6" maxlength="20" required>
-                                    <legend class="modal__button-name">Password</legend>
-                                    <input name="password" type="password" id="passwordSignUp"
-                                        class="modal__button modal__button_text modal__button_type_text" autocomplete
-                                        minlength="6" maxlength="40" required>
+                                    <fieldset>
+                                        <legend class="modal__button-name">E-mail</legend>
+                                        <input name="login" type="email" id="emailSignUp"
+                                            class="modal__button modal__button_text modal__button_type_text"
+                                            minlength="6" maxlength="20" required>
+                                    </fieldset>
+                                    <fieldset>
+                                        <legend class="modal__button-name">Password</legend>
+                                        <input name="password" type="password" id="passwordSignUp"
+                                            class="modal__button modal__button_text modal__button_type_text"
+                                            minlength="6" maxlength="40" required>
+                                    </fieldset>
                                     <button type="submit"
                                         class="modal__button modal__button_text modal__button_type_signUp">Sign
                                         Up</button>
@@ -106,18 +114,24 @@
                             <div class="modal__block-signReg">
                                 <h4 class="modal__title">Password recovery</h4>
                                 <form id="signReg" name="signReg">
-                                    <legend class="modal__button-name">E-mail</legend>
-                                    <input name="login" type="email" id="emailSignReg"
-                                        class="modal__button modal__button_text modal__button_type_text" autocomplete
-                                        minlength="6" maxlength="20" required>
-                                    <legend class="modal__button-name">New password</legend>
-                                    <input name="password" type="password" id="passwordNewSignReg"
-                                        class="modal__button modal__button_text modal__button_type_text" autocomplete
-                                        minlength="6" maxlength="40" required>
-                                    <legend class="modal__button-name">Password</legend>
-                                    <input name="password" type="password" id="passwordSignReg"
-                                        class="modal__button modal__button_text modal__button_type_text" autocomplete
-                                        minlength="6" maxlength="40" required>
+                                    <fieldset>
+                                        <legend class="modal__button-name">E-mail</legend>
+                                        <input name="login" type="email" id="emailSignReg"
+                                            class="modal__button modal__button_text modal__button_type_text"
+                                            minlength="6" maxlength="20" required>
+                                    </fieldset>
+                                    <fieldset>
+                                        <legend class="modal__button-name">New password</legend>
+                                        <input name="password" type="password" id="passwordNewSignReg"
+                                            class="modal__button modal__button_text modal__button_type_text"
+                                            minlength="6" maxlength="40" required>
+                                    </fieldset>
+                                    <fieldset>
+                                        <legend class="modal__button-name">Password</legend>
+                                        <input name="password" type="password" id="passwordSignReg"
+                                            class="modal__button modal__button_text modal__button_type_text"
+                                            minlength="6" maxlength="40" required>
+                                    </fieldset>
                                     <button type="submit"
                                         class="modal__button modal__button_text modal__button_type_password">Restore
                                         password</button>
@@ -315,7 +329,6 @@
         </footer>
     </div>
     <script src="./script.js"></script>
-    <script src="./scriptSlider.js"></script>
 </body>
 
 </html>
