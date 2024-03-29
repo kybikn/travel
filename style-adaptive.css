@@ -217,12 +217,6 @@
   .preview__input::placeholder {
     font-size: 11px;
   }
-
-  /* .preview__button {
-    width: 228px;
-    height: 59px;
-    margin-top: 18px;
-  } */
   
   .button__text_type_m {
     font-size: 13px;
@@ -346,6 +340,11 @@
     border-radius: 10px;
   }
 
+  .nav.navbar {
+    position: absolute;
+    right: 0;
+  }
+  
   .header__links {
     display: flex;
     flex-direction: column;
@@ -364,10 +363,6 @@
   .header__link {
   }
 
-  .nav.navbar {
-    position: absolute;
-    right: 0;
-  }
 
   .hamburger {
     display: block;
