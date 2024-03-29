@@ -132,7 +132,8 @@
 /* ---------------header--------------- */
 .header {
   background-image: url("./assets/images/mountain.png");
-  background-size: 100%;
+  /* background-size: 100%; */
+  background-size: cover;
   filter: drop-shadow(0px 4px 4px rgba(13, 96, 111, 0.5));
 }
 
@@ -219,9 +220,9 @@
 .preview {
   background-image: url("./assets/images/mountain.png");
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
   background-position: center -90px;
-  background-size: 100%;
+  /* background-size: 100%; */
 }
 
 .preview__container {
@@ -261,6 +262,8 @@
   background: rgba(255, 255, 255, 0.7);
   border-radius: 16px;
   height: 95px;
+  max-width: 892px;
+  width: 100%;
 }
 
 .preview__form {
@@ -472,7 +475,8 @@
   background-size: 100%;
   background-repeat: no-repeat;
   background-position: center 0;
-  background-size: contain;
+  /* background-size: contain; */
+  background-size: cover;
   padding-bottom: 60px;
 }
 
@@ -493,7 +497,9 @@
   margin: 0 auto;
   padding: 40px 0 0 0;
   list-style: none;
-  width: 1200px;
+  /* width: 1200px; */
+  max-width: 1200px;
+  width: 100%;
 }
 
 .table__cell {
