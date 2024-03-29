@@ -47,6 +47,9 @@
   font-weight: 400;
 }
 
+fieldset {
+  border:0 none;
+}
 /* ---------------button--------------- */
 .button {
   background: #0d606f;

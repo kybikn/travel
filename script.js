@@ -11,8 +11,10 @@ function toggleMenu() {
 }
 
 function closeMenu(event) {
-  nav.classList.remove("navbar");
-  hamburger.classList.remove("change");
+  if (event.target.classList.contains("header__link")) {
+    nav.classList.remove("navbar");
+    hamburger.classList.remove("change");
+  }
 }
 
 // ------------popup------------
