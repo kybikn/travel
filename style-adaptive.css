@@ -292,7 +292,7 @@
     display: block;
   }
 
-  .arrows__left {
+  /* .arrows__left {
     position: absolute;
     z-index: 1;
     left: 25px;
@@ -304,6 +304,18 @@
     z-index: 1;
     right: 25px;
     bottom: 47px;
+  } */
+
+  .arrows_left {
+    position: absolute;
+     top: 80px;
+    left: 25px;
+  }
+  
+  .arrows_right {
+    position: absolute;
+    top: 80px;
+    right: 25px;
   }
 
   .destinations__button {

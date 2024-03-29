@@ -1,3 +1,4 @@
+// ------------hamburger------------
 const hamburger = document.querySelector(".hamburger");
 const nav = document.querySelector(".nav");
 
@@ -14,7 +15,7 @@ function closeMenu(event) {
   hamburger.classList.remove("change");
 }
 
-// --------------------
+// ------------popup------------
 const form = document.getElementById("#signIn");
 const button = document.querySelector(".header__button");
 const buttonAdaptive = document.querySelector(".header__li_modal");
@@ -116,79 +117,80 @@ closeButton.addEventListener("click", close);
 reg.addEventListener("click", openModalSignUp);
 log.addEventListener("click", openModalSignIn);
 pass.addEventListener("click", openModalReconst);
-
 buttonSignIn.addEventListener("click", alertSignIn);
 buttonSignUp.addEventListener("click", alertSignUp);
 buttonPassword.addEventListener("click", alertPassword);
 
 
-// -------------------------------------------------------------------
-// const point = document.querySelectorAll(".slider__img");
-// const imageSlider = document.querySelectorAll(".circles__dot");
-// const leftBtn = document.querySelector(".arrows__left");
-// const rightBtn = document.querySelector(".arrows__right");
+// ------------slider------------
+const dots = document.querySelectorAll('.circles__dot')
+const imageSlider = document.querySelectorAll('.slider__img')
+const textSlider = document.querySelectorAll('.slider__text')
+const leftArrow = document.querySelector('.arrows_left')
+const rightArrow = document.querySelector('.arrows_right')
 
-
-let point = document.querySelectorAll('.circles__dot')
-let imageSlider = document.querySelectorAll('.imageSlider')
-let leftBtn = document.getElementById('leftBtn')
-let rightBtn = document.getElementById('rightBtn')
-
-point[0].classList.add('activeImage')
-imageSlider[0].classList.add('activeImage')
+dots[0].classList.add('active')
+imageSlider[0].classList.add('active')
 
 let counter = 0;
+// let countertext = 0;
 
-for (let i = 0; i < point.length; i++) {
-  point[i].addEventListener('click', () => {
+for (let i = 0; i < dots.length; i++) {
+  dots[i].addEventListener('click', () => {
     for (let k = 0; k < imageSlider.length; k++) {
-      point[k].classList.remove('activeImage')
-      imageSlider[k].classList.remove('activeImage')
+      dots[k].classList.remove('active')
+      imageSlider[k].classList.remove('active')
     }
     counter = i;
-    imageSlider[counter].classList.add('activeImage');
-    point[counter].classList.add('activeImage');
+    imageSlider[counter].classList.add('active');
+    dots[counter].classList.add('active');
   })
 }
 
-leftBtn.addEventListener('click', () => {
+leftArrow.addEventListener('click', () => {
   for (let k = 0; k < imageSlider.length; k++) {
-    point[k].classList.remove('activeImage')
-    imageSlider[k].classList.remove('activeImage')
+    dots[k].classList.remove('active')
+    imageSlider[k].classList.remove('active')
   }
   counter--
+  // countertext--
   if (counter < 0) {
     counter = imageSlider.length - 1
+    // counter = imageSlider
   }
-  imageSlider[counter].classList.add('activeImage');
-  point[counter].classList.add('activeImage');
+  imageSlider[counter].classList.add('active');
+  dots[counter].classList.add('active');
 })
 
-rightBtn.addEventListener('click', () => {
+rightArrow.addEventListener('click', () => {
   for (let k = 0; k < imageSlider.length; k++) {
-    point[k].classList.remove('activeImage')
-    imageSlider[k].classList.remove('activeImage')
+    dots[k].classList.remove('active')
+    imageSlider[k].classList.remove('active')
+    // textSlider.style.display = "none";
   }
   counter++
+  // countertext++
   if (counter >= imageSlider.length) {
     counter = 0
   }
-  imageSlider[counter].classList.add('activeImage');
-  point[counter].classList.add('activeImage');
+  // textSlider[textSlider.length - 1].style.display = "block";
+  imageSlider[counter].classList.add('active');
+  dots[counter].classList.add('active');
 })
 
 
 function slowSlider() {
   for (let k = 0; k < imageSlider.length; k++) {
-    point[k].classList.remove('activeImage')
-    imageSlider[k].classList.remove('activeImage')
+    dots[k].classList.remove('active')
+    imageSlider[k].classList.remove('active')
   }
   counter++
+  // countertext++
   if (counter >= imageSlider.length) {
     counter = 0
   }
-  imageSlider[counter].classList.add('activeImage');
-  point[counter].classList.add('activeImage');
+  imageSlider[counter].classList.add('active');
+  dots[counter].classList.add('active');
 }
 
 
